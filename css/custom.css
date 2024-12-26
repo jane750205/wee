@@ -1,0 +1,64 @@
+/* 導覽列背景顏色  */
+:root,
+[data-bs-theme=light] {
+  --bs-dark-rgb: 90, 62, 45;
+}
+
+:root,
+[data-bs-theme=light] {
+--bs-primary-text-emphasis: #ed9e28;
+}
+
+/* 連結google Fonts雲端字體，提供用戶一致體驗UX；copy @import url 的連結回來貼在custom.css */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400&display=swap');
+
+/* 套用google Fonts雲端字體；透過BODY標籤，改變全部的文案預設字體*/
+body{font-family: "微軟正黑體","Noto Sans TC", serif;}
+
+/* 更改根元素的文字大小，1rem=16px */
+html{font-size: 20PX;}
+
+/* 改善手機顯示carousel太小的問題 */
+.carousel {
+  margin-top: 70px; /* 根據 navbar 的高度調整，預設 bootstrap navbar 高度約為 56px */
+}
+/* 固定carousel圖片高度 height可以改設定 min-height/max-height 改善手機顯示的問題 */
+.carousel-item img{
+  width: 100%;
+  height: auto; 
+  margin: auto;
+  object-fit: cover; /* 確保圖片比例不變，並填充容器 */
+}
+
+
+
+/* 按鈕顏色要自訂 在bootstrap.css找到按鈕顏色EX:btn-primary(藍色)的程式碼抓回來再自己把原本設定的藍改成你要的顏色 */
+.btn-primary {
+  --bs-btn-color: #fff;
+  --bs-btn-bg: #a24c17;
+  --bs-btn-border-color: #a24c17;
+  --bs-btn-hover-color: #fff;
+  --bs-btn-hover-bg: #b15922;
+  --bs-btn-hover-border-color: #b15922;
+  --bs-btn-focus-shadow-rgb: 49, 132, 253;
+  --bs-btn-active-color: #fff;
+  --bs-btn-active-bg: #b15922;
+  --bs-btn-active-border-color: #a24c17;
+  --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+  --bs-btn-disabled-color: #fff;
+  --bs-btn-disabled-bg: #a24c17;
+  --bs-btn-disabled-border-color: #a24c17;
+}
+
+/* 拿掉超連結文字下底線  複合選取器 footer跟a {屬性 文字裝飾 :值none不要 } line-through刪除線  underline下底線 */
+footer a {text-decoration: none;}
+
+/* 選取器是類別，影響個別，需要手動套用 */
+.h2-pink{font-size: 1.5rem;font-weight: 900;color: #F2A6B2; }
+
+/* 選取器是標籤，影響整體 */
+h2{font-size: 1.5rem; font-weight: 900; color:#ae5822 ;}
+
+textIndent{text-indent: 2rem;}
+
+.text-orange{color:#c66d36 ;}
